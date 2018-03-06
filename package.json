@@ -1,0 +1,16 @@
+{
+  "name": "audi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "concurrently --kill-others --names 'SERVER,CLIENT' -c 'black.bgWhite,cyan,gray.dim' 'pushd server && npm start' 'pushd client && npm start'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^3.5.1"
+  }
+}
