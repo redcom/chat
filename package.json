@@ -6,6 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "concurrently --kill-others --names 'SERVER,CLIENT' -c 'black.bgWhite,cyan,gray.dim' 'pushd server && npm start' 'pushd client && npm start'"
+    "build:docker:server": "pushd server && docker build -t audi-server .",
+    "run:docker:server:it": "docker run -p 8002:8000 -it --rm --name audi-server audi-server",
+    "run:docker:server:d": "docker run -p 8002:8000 -it --rm --name audi-server audi-server"
   },
   "keywords": [],
   "author": "",
